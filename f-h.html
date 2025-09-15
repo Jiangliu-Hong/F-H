@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>弗兰克—赫兹实验 · FH.html（锁定画布 1280×640 · 紫色闪光 5 帧淡出 · 可调播放速度）</title>
+  <title>弗兰克—赫兹实验仿真模拟· FH.html</title>
   <style>
     :root { --bg:#000; --text:#e5e7eb; }
     *{box-sizing:border-box}
@@ -528,8 +528,8 @@ function draw(){
   strokeLine(-l0*2 - d0*1/15, d0*22/42, -l0*2 + d0*1/15, d0*22/42, '#fff',2);
   strokeLine(-l0*2 - d0*3/15, d0*20/42, -l0*2 + d0*3/15, d0*20/42, '#fff',2);
   strokeLine(-2*l0, d0*20/42, -2*l0, d0/6, '#fff',2);
-
   strokeLine(0, 0, 0, yBase, '#fff',2);
+  strokeLine(0, 0, 0, d0*1/6, '#fff', 2);
   strokeLine(0, yBase, 6/15*lll, yBase, '#fff',2);
   strokeLine(6/15*lll, yBase - d0*0.5/15, 6/15*lll, yBase + d0*0.5/15, '#fff',2);
   strokeLine(19/45*lll, yBase - d0*1.5/15, 19/45*lll, yBase + d0*1.5/15, '#fff',2);
@@ -547,7 +547,7 @@ function draw(){
              yBase,
              lll + 1/7*l2 + 1/45*lll + 1/45*lll + 1/15*lll,
              yBase, '#fff',2);
-  strokeLine(lll + 1/7*l2 + 1/45*lll + 2/15*lll,
+  strokeLine(lll + 1/7*l2 + 1/45*lll + 2.35/15*lll,
              yBase,
              xAnode,
              yBase, '#fff',2);
@@ -569,10 +569,10 @@ function draw(){
   ctx.fillText('V', xMM(8/15*lll), yMM(-2.5/15*d0));
   ctx.fillText('A', xMM(lll + 1/7*l2 + 2/45*lll + 1.5/15*lll), yMM(-5/15*d0));
   ctx.textBaseline='alphabetic'; ctx.font='14px ui-sans-serif';
-  ctx.fillText(`${(+va.value).toFixed(0)}V`, xMM(6.5/15*lll), yMM(-5.7/15*d0));
-  ctx.fillText(`${(+vr.value).toFixed(0)}V`, xMM(xGrid),       yMM(-5.7/15*d0));
+  ctx.fillText(`${(+va.value).toFixed(0)}V`, xMM(6.8/15*lll),    yMM(-5.8/15*d0));
+  ctx.fillText(`${(+vr.value).toFixed(0)}V`, xMM(xGrid+0.5/15*lll),yMM(-5.8/15*d0));
   //ctx.fillText(`0.0`, xMM(xAnode + 0.02*lll), yMM(-5.7/15*d0));
-  ctx.fillText(`${formatCurrent(I_avg_A)}`, xMM(xAnode + 0.02*lll), yMM(-5.7/15*d0));
+  ctx.fillText(`${formatCurrent(I_avg_A)}`, xMM(xAnode + 0.02*lll), yMM(-5.8/15*d0));
 }
 
 // ===== 调度 =====
